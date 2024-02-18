@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestill Kinobilletter</title>
+</head>
+    <script src="oblig1.js"></script>
+
+<style>
+    p{
+        display: inline-block;
+        color: red;
+    }
+    input{
+        margin-left: 15px;
+    }
+    button{
+        margin-top: 15px;
+    }
+    /*
+    table, th, td{
+        border: 1px black solid;
+    }
+
+
+    table{
+        border-collapse: collapse;
+    }
+    */
+</style>
+
+<body>
+<h1>Bestillinger av kinobilletter</h1>
+
+<label for="velgeFilm">Velg film her</label>
+
+<select id="velgeFilm">
+    <option>Velg Film</option>
+    <option>Justice League</option>
+    <option>Venom 3</option>
+    <option>Shazam</option>
+    <option>Black Adam</option>
+    <option>Morbius</option>
+    <option>Avatar</option>
+</select>
+<p id="nullFilm"></p><br>
+
+<label for="innAntall">Antall<input id="innAntall" type="number" min="1"  style="width: 50px"></label>
+<p id="nullAntall"></p> <br>
+<label for="innFornavn">Fornavn<input id="innFornavn" type="text"></label>
+<p id="nullFornavn"></p> <br>
+<label for="innEtternavn">Etternavn<input id="innEtternavn" type="text"></label>
+<p id="nullEtternavn"></p> <br>
+<label for="innTelefonnr">Telefonnr<input id="innTelefonnr" type="text"></label>
+<p id="nullTelefonnr"></p><br>
+<label for="innEpost">Epost<input id="innEpost" type="email"></label>
+<p id="nullEpost"></p><br>
+
+<button onclick="kjopBillett()">Kjøp billett</button>
+
+<h2>Alle billetter</h2>
+
+<table id="tblFilmer"></table>
+
+<button id="slettKnp" onclick="slettBillett()">Slett billettene</button>
+
+</body>
+</html>

@@ -10,4 +10,4 @@ Hvordan programmet funker:
 
 Startert først med å lage en html template for input, knapper og output. Skrev så en javascript funksjon for å kunne hente inn input, og en sjekk for input for telefonnummer. Definerer så hva som skjer hvis det er ingen input fra en bruker. Så kommer det "push" av informasjonen hvis det er riktig input. Lager en tabell med informasjonen fra input, og nullstiller input verdien for å gjøre klar til neste billette. Lager så til slutt en slett funskjon som skal kobles til slett knappen. 
 
-Fant ut at input for bokstaver eller symboler i telefon-inputboksen fortsatt er mulig for å lage billette. Laget valider med regEx. Feil melding funker for tlf, men dukker ikke for e-post selv om det funker. 
+Fant ut at input for bokstaver eller symboler i telefon-inputboksen fortsatt er mulig for å lage billette. Laget valider med regEx. Feil melding funker for tlf, men dukker ikke opp for e-post selv om det funker. 

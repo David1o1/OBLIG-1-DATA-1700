@@ -20,7 +20,8 @@ function kjopBillett(){
 
     const filmer=document.getElementById("tblFilmer");
 
-    const sjekkTlfnr = Number(tlfnr.value);
+    const tlfRegex = /^(\+47|0047|47)?\d{8}$/;
+    const epostRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 
 
@@ -47,7 +48,7 @@ function kjopBillett(){
 
     }
 
-    if (isNaN(sjekkTlfnr)) {
+    if (!tlfRegex.test(tlfnr.value)) {
         feilTlfnr.innerHTML = "Du må skrive inn tall i tlfnr ";
 
 
@@ -62,6 +63,10 @@ function kjopBillett(){
     if (tlfnr.value.length !== 8) {
         feilTlfnr.innerHTML += "Telefonnummeret må ha 8 siffer";
 
+    }
+
+    if(!epostRegex.test(epost.value)){
+        feilEpost.innerHTML = "Ugyldig E-post";
     }
 
 

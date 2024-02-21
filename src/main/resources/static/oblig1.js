@@ -20,8 +20,8 @@ function kjopBillett(){
 
     const filmer=document.getElementById("tblFilmer");
 
-    const tlfRegex = /^(\+47|0047|47)?\d{8}$/;
-    const epostRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const tlfRegex = /^[0-9]+$/;
+    const epostRegex = /^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,}$/;
 
 
 
@@ -33,29 +33,32 @@ function kjopBillett(){
     if (antall.value === "") {
         feilAntall.innerHTML = "Du må velge/skrive noe i antall";
 
-
     }
 
     if (fornavn.value === "") {
         feilFornavn.innerHTML = "Du må skrive noe i fornavn";
-
 
     }
 
     if (etternavn.value === "") {
         feilEtternavn.innerHTML = "Du må skrive noe i etternavn";
 
-
     }
 
-    if (!tlfRegex.test(tlfnr.value)) {
-        feilTlfnr.innerHTML = "Du må skrive inn tall i tlfnr ";
+    if (epost.value === "") {
+        feilEpost.innerHTML = "Du må skrive noe i Epost";
 
-
+    } else if (!epostRegex.test(epost.value)) {
+        feilEpost.innerHTML = "Ugyldig Epost";
     }
+
 
     if (tlfnr.value === "") {
         feilTlfnr.innerHTML = "Du må skrive noe i telefonnummer, og ";
+
+
+    } else if (!tlfRegex.test(tlfnr.value)) {
+        feilTlfnr.innerHTML = "Du må skrive inn tall i tlfnr, ";
 
 
     }
@@ -65,15 +68,7 @@ function kjopBillett(){
 
     }
 
-    if(!epostRegex.test(epost.value)){
-        feilEpost.innerHTML = "Ugyldig E-post";
-    }
 
-
-    if (epost.value === "") {
-        feilEpost.innerHTML = "Du må skrive noe i Epost";
-
-    }
     else {
         billetter.push({
             Film: film.value,
